@@ -1,0 +1,1 @@
+export default function _(){return<>404</>}

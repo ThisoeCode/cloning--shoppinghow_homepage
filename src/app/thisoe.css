@@ -1,0 +1,11 @@
+:root{
+
+}
+
+html,body{margin:0;padding:0}
+i,button,a{all:unset}
+i{display:flex}
+button{cursor:pointer}
+
+
+/*  */
