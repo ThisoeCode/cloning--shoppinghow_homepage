@@ -1,9 +1,9 @@
 import { Disclaimer } from "@/components/disclaimer"
-import HeadTop from "@/features/banner/headtop"
+import Banner from "@/components/banner"
 
 export default function _(){
   return<>
     <Disclaimer/>
-    <HeadTop/>
+    <Banner/>
   </>
 }

@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import Search from "./search"
+import SearchForm from "./search"
 
 export default function HeadTop(){
   return<i id='headtop'>
@@ -11,6 +11,6 @@ export default function HeadTop(){
         alt="쇼핑하우"
       />
     </Link>
-    <Search/>
+    <SearchForm/>
   </i>
 }

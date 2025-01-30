@@ -1,1 +1,1 @@
-export default function _(){return<>404</>}
+export default function _(){return<i id="nf404"><i>404</i></i>}

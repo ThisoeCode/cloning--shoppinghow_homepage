@@ -10,6 +10,12 @@ i{display:flex;flex-direction:column}
 #headtop{flex-direction:row}
 #headtop{max-width:var(--min-width)}
 
+.ico{background:url('/ico.png') no-repeat}
+
+/* 404 */
+#nf404{width:100vw;height:90vh}
+#nf404 i{margin:auto;font-size:18pt}
+
 /* HeadTop */
 #headtop{
   justify-content:center;
@@ -17,7 +23,7 @@ i{display:flex;flex-direction:column}
   padding:30pt 0;
   gap:16pt;
 }
-#headtop *{margin-bottom:auto}
+#headtop *{margin:auto}
 
 #headlogo{cursor:pointer}
 
@@ -26,18 +32,27 @@ i{display:flex;flex-direction:column}
   border-radius:7px;
 }
 #search.focus{border-color:var(--shw)}
-#search input{
+#search-form{
+  flex-direction:row;
+}
+#search-form input{
+  z-index:1;
   width:360pt;
   height:21pt;
   font-size:16pt;line-height:21pt;
-  padding:9pt 16pt;
+  padding:7pt 0 7pt 12pt;
   border:0;outline:0;
   background:transparent;
 }
-
-.img.search{
-  background: url('https://shop1.daumcdn.net/search/cdn/simage/shopping/v2/common/nav/ico_gnb_shw.png') no-repeat;
-  background-size: 130px 90px;
+#search-submit{
+  margin:auto;
+  padding:9pt;
+  cursor:pointer;
+}
+#search-submit .ico{
+  width:23px;height:23px;
+  margin:auto;
+  background-size:130px 90px;
 }
 
 
