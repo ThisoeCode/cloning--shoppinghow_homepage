@@ -1,10 +1,10 @@
 :root{
   --min-width:999pt;
-  --shw:#f9624c;
+  --og:#f9624c;
 }
 
 html,body{margin:0;padding:0}
-i,a{all:unset}
+i,a,p{all:unset}
 i{display:flex;flex-direction:column}
 
 #headtop{flex-direction:row}
@@ -16,6 +16,7 @@ i{display:flex;flex-direction:column}
 #nf404{width:100vw;height:90vh}
 #nf404 i{margin:auto;font-size:18pt}
 
+
 /* HeadTop */
 #headtop{
   justify-content:center;
@@ -23,15 +24,17 @@ i{display:flex;flex-direction:column}
   padding:30pt 0;
   gap:16pt;
 }
-#headtop *{margin:auto}
-
 #headlogo{cursor:pointer}
 
-#search{
+
+/* Search Field */
+#search,#dropdown{
   border:solid #777 1pt;
   border-radius:7px;
+  position:relative;
 }
-#search.focus{border-color:var(--shw)}
+#search.focus{border-color:var(--og)}
+
 #search-form{
   flex-direction:row;
 }
@@ -39,8 +42,8 @@ i{display:flex;flex-direction:column}
   z-index:1;
   width:360pt;
   height:21pt;
-  font-size:16pt;line-height:21pt;
   padding:7pt 0 7pt 12pt;
+  font-size:16pt;line-height:21pt;
   border:0;outline:0;
   background:transparent;
 }
@@ -55,7 +58,56 @@ i{display:flex;flex-direction:column}
   background-size:130px 90px;
 }
 
+#suggestroll{
+  position:absolute;
+  top:0; left:21pt;
+  padding-top:7pt;
+  height:21pt; overflow:hidden;
+  font-size:16pt;line-height:21pt;
+  transition:.2s ease;
+}
+.asug{
+  flex-direction:row;
+  gap:7pt;
+  color:#777; font-weight:bold;
+}
+.asug>*{margin:0}
+.asug.current{transform:translateY(0)}
+.asug.current.animate{transform:translateY(21pt)}
+.asug.next{transform:translateY(-21pt)}
+.asug.next.animate {transform:translateY(0)}
 
+#dropdown-wrap{
+  position:relative;
+  height:0;
+  overflow:visible;
+}
+#dropdown{
+  top:-1;
+  border-color:var(--og);
+  padding:9pt 3pt;
+}
+#dropdown>*{margin:3pt auto 0 7pt;}
+#dropdown p{
+  margin:3px 9pt 7px;
+  font-size:16pt;
+  font-weight:bold;
+  cursor:default; user-select:none;
+}
+#dropdown .asug{
+  color:#000; font-weight:normal;
+  border-bottom:transparent solid 1px;
+  cursor:pointer;
+}
+#dropdown .asug:hover{color:var(--og);border-bottom-color:var(--og)}
+
+.related-keyword{display:block;
+  margin:3px;
+  font-weight:normal;
+  border-bottom:transparent solid 1px;
+  cursor:pointer;
+}.related-keyword:hover{border-bottom-color:var(--og)}
+.related-keyword span{color:var(--og)}
 
 /*  */
 
